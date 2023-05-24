@@ -29,7 +29,7 @@ public class TestStudent {
         student.learn(hoursStudying);
         double actual = student.getTotalStudyTime();
         //then
-        Assert.assertEquals(hoursStudying, actual, 0.1);
+        Assert.assertEquals(hoursStudying, actual, 0.01);
     }
 
 }
