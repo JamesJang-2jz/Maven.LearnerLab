@@ -13,7 +13,7 @@ public class Instructor extends Person implements Teacher{
     @Override
     public void lecture(Learner[] learners, double numberOfHours) {
         for (Learner l : learners) {
-            l.learn(numberOfHours);
+            l.learn(numberOfHours/learners.length);
         }
     }
 }
