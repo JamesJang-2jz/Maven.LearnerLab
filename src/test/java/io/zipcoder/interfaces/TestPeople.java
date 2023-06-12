@@ -32,4 +32,13 @@ public class TestPeople {
         Assert.assertFalse(people.contains(person1));
     }
 
+    @Test
+    public void testFindById(){
+        // Given
+        people.add(person1);
+        // When
+        Person actual = people.findById(1L);
+        // Then
+        Assert.assertEquals(person1, actual);
+    }
 }
