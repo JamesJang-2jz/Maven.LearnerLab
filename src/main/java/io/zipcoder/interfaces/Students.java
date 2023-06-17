@@ -13,9 +13,7 @@ public class Students extends People<Student>{
         add(student3);
     };
 
-//    public boolean contains(Student student){
-//        return this.contains(student);
-//    }
+
     public static Students getInstance(){
         return instance;
     }

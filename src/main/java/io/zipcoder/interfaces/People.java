@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People<T extends Person> implements Iterable<Person>{
-    List<Person> personList;
+public abstract class People<T extends Person> implements Iterable<T>{
+    List<T> personList;
     public People(){
         personList = new ArrayList<>();
     }
 
-    public void add(Person person){
+    public void add(T person){
         personList.add(person);
     }
 
-    public Person findById(long id){
-        for (Person p : personList) {
+    public T findById(long id){
+        for (T p : personList) {
             if (p.getId() == id){
                 return p;
             }
@@ -23,11 +23,11 @@ public class People<T extends Person> implements Iterable<Person>{
         return null;
     }
 
-    public boolean contains(Person person){
+    public boolean contains(T person){
         return personList.contains(person);
     }
 
-    public void remove(Person person){
+    public void remove(T person){
         personList.remove(person);
     }
 
@@ -48,7 +48,7 @@ public class People<T extends Person> implements Iterable<Person>{
     }
 
     @Override
-    public Iterator<Person> iterator() {
+    public Iterator<T> iterator() {
         return personList.iterator();
     }
 }

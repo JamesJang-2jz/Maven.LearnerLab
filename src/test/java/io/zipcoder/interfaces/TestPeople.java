@@ -10,7 +10,11 @@ public class TestPeople {
     Person person1 = new Person(1L, "caterpie");
     @Before
     public void setup() {
-        people = new People();
+        people = Students.getInstance();
+        /**
+        changed from new People() to Students.getInstance. Students is subtype from People
+        since we changed People to abstract
+         */
     }
 
     @Test
