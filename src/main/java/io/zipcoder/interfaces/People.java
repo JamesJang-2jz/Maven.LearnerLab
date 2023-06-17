@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class People implements Iterable<Person>{
+public class People<T extends Person> implements Iterable<Person>{
     List<Person> personList;
     public People(){
         personList = new ArrayList<>();
